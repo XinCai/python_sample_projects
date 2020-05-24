@@ -27,15 +27,22 @@ soup = BeautifulSoup(x.content, 'html.parser')
 #print(table_body)
 
 data = [];
-table = soup.find('table', attrs={'class':'lineItemsTable'})
+table = soup.find('div', {"id": "covid19-container"})
 
-table_body = table.find('tbody')
+#print(table)
 
-rows = table_body.find_all('td')
+rows = table.find_all('tr')
+
+#print(rows.count)
+
+#table_body = table.find('tbody')
+
+#rows = table_body.find_all('td')
 
 for row in rows:
-    cols = row.find_all('td')
-    cols = [ele.text.strip() for ele in cols]
-    data.append([ele for ele in cols if ele]) # Get rid of empty values
+   print(row.text)
+   #cols = row.find_all('tr')
+   #cols = [ele.text.strip() for ele in cols]
+   #data.append([ele for ele in cols if ele]) # Get rid of empty values
 
-print(data)
+#print(data)
