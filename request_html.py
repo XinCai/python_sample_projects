@@ -15,6 +15,4 @@ print(r.html)
 #print(r.html.find('div#KeyIndicators > a:nth-child(2)')[0])
 # print(help(r))
 #print(r.html.find('div#middle tbody  tr  td  ul:nth-child(2)  div'))
-#middle > tbody > tr > td > ul:nth-child(2) > div > b > font
-##KeyIndicators > a:nth-child(2)
 #print(list(map(lambda x: x.text, r.html.find('div.content span'))))

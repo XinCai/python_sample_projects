@@ -2,6 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 
 x = requests.get('https://www.abs.gov.au/')
+
+# https://requests.readthedocs.io/en/latest/api/
+# r=requests.get("http://www.example.com/", headers={"content-type":"text"})
+
 #print(x)
 soup = BeautifulSoup(x.content, 'html.parser')
 
