@@ -6,6 +6,16 @@ x = requests.get('https://www.abs.gov.au/')
 # https://requests.readthedocs.io/en/latest/api/
 # r=requests.get("http://www.example.com/", headers={"content-type":"text"})
 
+
+# url = 'SOME URL'
+#
+# headers = {
+#     'User-Agent': 'My User Agent 1.0',
+#     'From': 'youremail@domain.com'  # This is another valid field
+# }
+#
+# response = requests.get(url, headers=headers)
+
 #print(x)
 soup = BeautifulSoup(x.content, 'html.parser')
 
