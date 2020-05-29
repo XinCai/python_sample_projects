@@ -1,3 +1,5 @@
+import json
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -26,23 +28,26 @@ soup = BeautifulSoup(x.content, 'html.parser')
 #austrlian population live number
 #print(table_body)
 
-data = [];
 table = soup.find('div', {"id": "covid19-container"})
 
 #print(table)
-
 rows = table.find_all('tr')
 
-#print(rows.count)
+print(len(rows))
 
 #table_body = table.find('tbody')
-
 #rows = table_body.find_all('td')
-
+data_by_country = {}
+data = []
 for row in rows:
-   print(row.text)
-   #cols = row.find_all('tr')
-   #cols = [ele.text.strip() for ele in cols]
-   #data.append([ele for ele in cols if ele]) # Get rid of empty values
+   data.append(row.text)
+   # if row.contents[3] is not None:
+   #      data_by_country['location'] = row.contents[3].text
+   # data_by_country['case'] = row.contents[5].text
+   # data_by_country['deaths'] = row.contents[7].text
+   # data_by_country['recover'] = row.contents[9].text
 
-#print(data)
+print(data)
+json_data = json.dumps(data, indent=4)
+print(json_data)
+
