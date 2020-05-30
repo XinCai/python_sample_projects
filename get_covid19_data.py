@@ -47,7 +47,7 @@ for row in rows:
    # data_by_country['deaths'] = row.contents[7].text
    # data_by_country['recover'] = row.contents[9].text
 
-print(data)
+# print(data)
 json_data = json.dumps(data, indent=4)
 print(json_data)
 
