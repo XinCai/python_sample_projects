@@ -56,7 +56,7 @@ class ABSData:
     population = ""
     unemployment = ""
     weekly_earnings = ""
-    soup = BeautifulSoup
+    soup = {}
     aus_data = {}
 
     def __init__(self,url):
@@ -80,6 +80,7 @@ class ABSData:
         self.unemployment = self.aus_data['unemployment_rate']
 
     def show_cpi(self):
+        print(type(self.soup))
         print(self.cpi)
 
     def show_population(self):
