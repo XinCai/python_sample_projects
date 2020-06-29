@@ -50,7 +50,7 @@ from bs4 import BeautifulSoup
 # print(json_data)
 
 class ABSData:
-
+    """data model for abs data"""
     cpi = ""
     gdp = ""
     population = ""
@@ -80,6 +80,7 @@ class ABSData:
         self.unemployment = self.aus_data['unemployment_rate']
 
     def show_cpi(self):
+        """show cpi data"""
         print(type(self.soup))
         print(self.cpi)
 
@@ -103,3 +104,4 @@ obj.show_cpi()
 # obj.show_population()
 # obj.show_unemployment()
 print(obj.get_data())
+# print(help(ABSData))
