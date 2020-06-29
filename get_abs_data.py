@@ -100,7 +100,7 @@ class ABSData:
         return json.dumps(self.aus_data, indent=4)
 
 obj = ABSData('https://www.abs.gov.au/')
-obj.show_cpi()
+# obj.show_cpi()
 # obj.show_population()
 # obj.show_unemployment()
 print(obj.get_data())
